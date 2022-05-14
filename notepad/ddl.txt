@@ -1,0 +1,17 @@
+create database ddl
+use ddl
+create table example (id int identity ,name varchar(45),salary varchar(45));
+select * from example
+insert into example values('manish',12000),
+('kuldeep',15600),
+('sanjay',17650),
+('pradeep',158580),
+('shrinivash',124570)
+alter table example alter column  salary int;
+update example set salary=8779772 where id=11;
+select name from example where id=7;
+select sum(salary) from example
+select salary from example where salary>8724672 
+select salary from example where salary<8724672 
+
+

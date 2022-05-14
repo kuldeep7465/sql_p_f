@@ -1,0 +1,69 @@
+use mydata;
+select * from mytable1;
+insert into mytable1 values(5,'subhash','subhashkumar724827@gmail.com');
+delete from mytable1 where name='subhash';
+update mytable1 set roll_no=15507 where id=5;
+
+alter table mytable1 add  roll_no int ;
+alter table mytable1 drop column  roll_no ;
+select * from mytable1 where  roll_no between 13655 and 15095; 
+
+
+
+(secound day )
+
+use mydata;
+select * from mytable1;
+insert into mytable1 values(5,'subhash','subhashkumar724827@gmail.com');
+select name,email from mytable1 where roll_no=12345;
+update mytable1 set roll_no=724827 where id=3;
+select name from mytable1 ;
+select roll_no from mytable1 ;
+delete from mytable1 where id in (5);
+select sum(roll_no) from mytable1 where name='kuldeep' or name='rovi';
+select count(name) from mytable1 ;
+select count(roll_no) from mytable1 ;
+
+(3/12/2022)
+
+create database employee;
+use employee;
+create table empdata (id int identity,name varchar(45),salary int);
+select *from empdata;
+insert into empdata values('kuldeep',1200),
+('sanjay',1200),
+('rovi',1600),
+('manish',15200),
+('pradeep',5600),
+('subhash',15600),
+('rihan',123200),
+('kuldeep',98200);
+select distinct name from empdata;
+delete from empdata where id in (1);
+update empdata set salary=5000 where id=5;
+select * from empdata where salary >=1600 and salary<=15600;
+select top 5 *from empdata ;
+select top 5 *from empdata order by salary desc ;
+select top 5 sum(salary) from empdata;
+select max(salary) from empdata;
+select min(salary) from empdata;
+select * from empdata where name like 'k%';
+select * from empdata where name like '_u%';
+select * from empdata where name like '%p';
+select * from empdata where name like '%e%';
+select * from empdata where name like '_u_d__p%';
+
+
+(3/13/2022)
+
+create database joins;
+use joins;
+create table table2(id int ,dp_name varchar(45),mobile int);
+select *from table2;
+drop table2;
+delete from table2 where id=1;
+
+insert into table2 values(5,'m_tech',5718045);
+select table1.st_name ,table2.dp_name from table1 left  join table2 on table1.id=table2.id ;
+(natural join)
+select dp_name from table1,table2 where table1.id=table2.id;
